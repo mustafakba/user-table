@@ -32,6 +32,7 @@
                     <span class="title">Boy - Kilo  </span>: {{user.height}} cm  - {{user.weight}} kg  <br>
                 </p>
             </div>
+            <router-link to="/" tag="button" class=" d-flex align-items-center justify-content-center btn btn-primary">Anasayfaya Dön </router-link>
         </div>
     </div>
 
@@ -52,9 +53,27 @@ export default {
             }
         }
     },
+    computed:{
+      users(){
+          console.log('computed çalisti')
+          return this.$store.state.users
+      }
+    },
+    watch:{
+      users(value){
+          console.log("value" , value)
+          this.firstRun()
+      }
+    },
+    methods:{
+        firstRun(){
+            this.user = this.users.find(x => x.id == this.$route.params.id)
+        }
+    },
     created() {
-        let users = this.$store.state.users
-        this.user = users.find(x => x.id == this.$route.params.id)
+        this.firstRun()
+        console.log('About Mounted Çalişti')
+        console.log(this.users)
     },
 }
 </script>

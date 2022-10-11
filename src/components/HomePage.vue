@@ -22,22 +22,13 @@ export default {
         }
     },
     methods: {
-        getAllUser() {
-            this.$store.state.users
-        },
-        getUserDetail() {
-            fetch('https://dummyjson.com/users/1')
-                .then(res => res.json())
-        },
         goAbout(user){
             let id = user.item.id
-            console.log(user.item.id)
             this.$router.push(`/about/${id}`)
         }
     },
     created() {
-        this.getAllUser()
-        this.getUserDetail()
+        this.items = this.$store.state.users
     },
     computed :{
         changeUser(){
@@ -46,8 +37,8 @@ export default {
     },
     watch :{
         changeUser : function (value){
-            console.log(value)
             this.items = value
+            console.log(value)
         }
     }
 }

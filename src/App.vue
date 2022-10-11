@@ -12,7 +12,8 @@
 export default {
 
     created() {
-        this.$store.commit("getAllUser2")
+        console.log('CREATED APP CALİSTİ')
+        this.$store.dispatch("getAllUser2")
     }
 
 }
