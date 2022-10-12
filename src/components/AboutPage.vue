@@ -47,10 +47,7 @@ export default {
     name: "AboutPage",
     data() {
         return {
-            user: {
-                firstName :"",
-                lastName :"",
-            }
+            user: {}
         }
     },
     computed:{
