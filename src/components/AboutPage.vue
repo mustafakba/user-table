@@ -70,7 +70,7 @@ export default {
     created() {
         this.firstRun()
         console.log('About Mounted Çalişti')
-        console.log(this.users)
+        console.log(this.users )
     },
 }
 </script>
