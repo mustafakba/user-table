@@ -1,6 +1,8 @@
 # personal
-# Api'den verileri çekip tabloya işleyen - detay adlı butona tıklandığında ise o veri ile ilgili detayları ekrana getiren uygulama
-
+```
+ Api'den verileri çekip tabloya işleyen - detay adlı butona tıklandığında ise o veri ile ilgili detayları ekrana getiren uygulama
+```
+#
 ## Project setup
 ```
 npm install
